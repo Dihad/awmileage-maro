@@ -44,7 +44,7 @@ h3 {
   height: 40vw; /* Use relative units for height */
   width: 40vw; /* Use relative units for width */
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 5vw; /* Adjust gap for smaller screens */
 }
