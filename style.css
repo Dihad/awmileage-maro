@@ -111,14 +111,14 @@ h3 {
 /* Media Queries for Mobile Devices */
 @media (max-width: 600px) {
   .board {
-    height: 65vw; /* Adjust height for smaller screens */
-    width: 65vw; /* Adjust width for smaller screens */
-    gap: 3vw; /* Adjust gap for smaller screens */
+    height: 80vw; /* Adjust height for smaller screens */
+    width: 80vw; /* Adjust width for smaller screens */
+    gap: 5vw; /* Adjust gap for smaller screens */
   }
 
   .hole {
-    height: 15vw; /* Adjust hole size */
-    width: 15vw; /* Adjust hole size */
+    height: 35vw; /* Adjust hole size */
+    width: 35vw; /* Adjust hole size */
   }
 
   .finalScore {
