@@ -15,38 +15,41 @@ body {
   overflow: hidden;
   cursor: none;
 }
-.box {
 
+.box {
+  position: absolute; /* Changed to absolute for better positioning */
   top: 10px;
   left: 10px;
   border: 1px solid #fff;
   padding: 0.8rem;
 }
+
 h3 {
   font-size: 1.4rem;
-  /* margin-bottom: 1rem; */
 }
+
 .score,
 .countdown {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .score span,
 .countdown span {
   margin: 0px 2px;
 }
+
 .board {
-  height: 500px;
-  width: 500px;
-  /* border: 1px solid #000; */
+  height: 40vw; /* Use relative units for height */
+  width: 40vw; /* Use relative units for width */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 40px;
+  gap: 5vw; /* Adjust gap for smaller screens */
 }
+
 .hole {
-  /* background-color: cyan; */
   background-color: rgb(165, 85, 11);
   border-radius: 50%;
   box-shadow: inset 0 10px 0 7px rgb(53, 21, 6),
@@ -54,6 +57,7 @@ h3 {
   position: relative;
   overflow: hidden;
 }
+
 .hole .mole {
   width: 70%;
   position: absolute;
@@ -62,6 +66,7 @@ h3 {
   bottom: 0;
   animation: raise 0.3s ease-out;
 }
+
 @keyframes raise {
   0% {
     transform: translateX(-50%) translateY(100%);
@@ -71,17 +76,19 @@ h3 {
   }
 }
 
-
 .cursor.active {
   transform: translate(-20%, -20%) rotate(-45deg);
 }
+
 .finalScore {
   display: none;
   border: 1px solid #fff;
   padding: 1rem;
-  width: 320px;
+  width: 80%; /* Use relative width */
+  max-width: 320px; /* Limit max width */
   text-align: center;
 }
+
 .restartBtn {
   display: none;
   padding: 0.5rem 1rem;
@@ -95,7 +102,30 @@ h3 {
   cursor: pointer;
   border-radius: 6px;
 }
+
 .restartBtn:hover {
   background-color: transparent;
   border: 1px solid #fff;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 600px) {
+  .board {
+    height: 45vw; /* Adjust height for smaller screens */
+    width: 45vw; /* Adjust width for smaller screens */
+    gap: 3vw; /* Adjust gap for smaller screens */
+  }
+
+  .hole {
+    height: 15vw; /* Adjust hole size */
+    width: 15vw; /* Adjust hole size */
+  }
+
+  .finalScore {
+    width: 90%; /* Adjust final score width */
+  }
+
+  .restartBtn {
+    font-size: 16px; /* Adjust button font size */
+  }
 }
