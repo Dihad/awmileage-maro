@@ -111,8 +111,8 @@ h3 {
 /* Media Queries for Mobile Devices */
 @media (max-width: 600px) {
   .board {
-    height: 45vw; /* Adjust height for smaller screens */
-    width: 45vw; /* Adjust width for smaller screens */
+    height: 65vw; /* Adjust height for smaller screens */
+    width: 65vw; /* Adjust width for smaller screens */
     gap: 3vw; /* Adjust gap for smaller screens */
   }
 
